@@ -1,0 +1,308 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Exo 2', sans-serif;
+  background: white;
+  color: #1a1a1a; /* Чуть мягче чем чистый черный */
+  line-height: 1.5;
+}
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ================= HEADER / FOOTER ================= */
+
+.header,
+.footer {
+  background: linear-gradient(90deg, #ff6600, #ff8c00);
+  color: white;
+  padding: 1rem 0;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1); /* Тень для отделения от контента */
+}
+
+.nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* Позволяет перенос элементов если не влезают */
+}
+
+.title {
+  margin: 0;
+  font-size: 1.8rem; /* Оптимальный размер */
+  white-space: nowrap;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.nav-links a:hover {
+  color: #ffd700;
+}
+
+/* ================= MAIN ================= */
+
+main {
+  flex: 1;
+}
+
+/* ================= FIRST BLOCK (HERO) ================= */
+
+.description {
+  position: relative;
+  /* Убедитесь, что путь к картинке верный */
+  background: url('/package.jpeg') center / cover no-repeat;
+  /* clamp(мин, предпочтительно, макс) - делает отступы адаптивными */
+  padding: clamp(3rem, 10vh, 8rem) 1.5rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.description::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.8),
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.8)
+  );
+  z-index: 1;
+}
+
+.description .content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.description .content h2 {
+  /* Адаптивный шрифт: минимум 2rem, максимум 3.5rem */
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  margin-bottom: 1.5rem;
+  font-weight: 800;
+  color: white;
+  line-height: 1.2;
+}
+
+.description .content p {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  color: #f2f2f2;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ================= SECTIONS COMMON ================= */
+
+.why,
+.contacts {
+  /* Адаптивные отступы сверху/снизу */
+  padding: clamp(3rem, 5vw, 5rem) 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.content h2 {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  margin-bottom: 2.5rem;
+  color: #333;
+}
+
+/* ================= FEATURES GRID ================= */
+
+.features {
+  display: grid;
+  /* Умная сетка: если карточка меньше 280px, она переносится, но занимает всю ширину */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  justify-content: center;
+}
+
+.feature {
+  background: white;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%; /* Чтобы все карточки были одной высоты */
+}
+
+.feature:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(255, 102, 0, 0.2);
+}
+
+.icon {
+  font-size: 3.5rem;
+  color: #ff6600;
+  margin-bottom: 1.5rem;
+}
+
+.feature h3 {
+  color: #ff6600;
+  margin: 0 0 1rem 0;
+  font-size: 1.4rem;
+}
+
+.feature p {
+  color: #555;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ================= CONTACTS ================= */
+
+.contact-item {
+  background: #fff;
+  border: 1px solid #eee;
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin: 1rem auto;
+  max-width: 600px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+}
+
+.contact-item a {
+  color: #ff6600;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.2s;
+}
+
+.contact-item a:hover {
+  color: #cc5200;
+}
+
+/* ================= FOOTER ================= */
+
+.footer .nav-links {
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.footer p {
+  text-align: center;
+  margin: 0;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+/* ================= RESPONSIVE (MEDIA QUERIES) ================= */
+
+/* Планшеты (до 1024px) */
+@media (max-width: 1024px) {
+  .features {
+    /* Чуть уменьшаем карточки, чтобы влезало по 3 или 2 в ряд */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+  }
+}
+
+/* Мобильные устройства (до 768px) */
+@media (max-width: 768px) {
+  .header {
+    padding: 1rem 0;
+  }
+
+  .nav {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Увеличиваем область клика для пальцев */
+  .nav-links a {
+    display: block;
+    padding: 0.5rem;
+    width: 100%; 
+  }
+
+  /* Исправление сетки для планшетов/больших телефонов */
+  .features {
+    gap: 1.5rem;
+  }
+}
+
+/* Маленькие телефоны (до 480px) */
+@media (max-width: 480px) {
+  .nav {
+    padding: 0 1rem;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .description {
+    /* Делаем отступы меньше, чтобы текст влезал */
+    padding: 3rem 1rem; 
+  }
+
+  /* Карточки на весь экран */
+  .features {
+    grid-template-columns: 1fr; 
+    gap: 1.5rem;
+  }
+
+  .feature {
+    padding: 1.5rem;
+  }
+
+  .icon {
+    font-size: 3rem;
+  }
+  
+  .contact-item {
+    padding: 1rem;
+  }
+}
