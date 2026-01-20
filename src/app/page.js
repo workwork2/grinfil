@@ -13,7 +13,7 @@ export default function Home() {
     <div className="App">
       <header className="header">
         <nav className="nav">
-          <h1 className="title">Дуалити</h1>
+          <h1 className="title">ООО «Консультгрупп»</h1>
           <ul className="nav-links">
             <li><a href="#about">О компании</a></li>
             <li><a href="#why">Почему выбирают нас</a></li>
@@ -121,17 +121,18 @@ export default function Home() {
             <h2>Контакты</h2>
 
             <div className="contact-item">
-              <strong>Адрес:</strong> 123098, город Москва, ул Рогова, д. 17, помещ. 1/п
+              <strong>Email:</strong>{' '}
+              <a href="mailto:konsult.grupp@mail.ru">konsult.grupp@mail.ru</a>
             </div>
 
             <div className="contact-item">
               <strong>Телефон:</strong>{' '}
-              <a href="tel:+79143386139">8 (926) 545 74 54</a>
+              <a href="tel:+79143384783">+7 (914) 338 47 83</a>
             </div>
 
             <div className="contact-item">
-              <strong>Email:</strong>{' '}
-              <a href="mailto:mamont-imp@bk.ru">dualiti@internet.ru</a>
+              <strong>Адрес:</strong> 692512, Приморский край, город Уссурийск,
+              Комсомольская ул, зд. 28а, помещ. 30
             </div>
           </div>
         </section>
@@ -144,10 +145,9 @@ export default function Home() {
             <li><a href="#why">Почему выбирают нас</a></li>
             <li><a href="#contacts">Контакты</a></li>
           </ul>
-          <p>© 2025 Дуалити. Все права защищены.</p>
+          <p>© 2025 ООО «Консультгрупп». Все права защищены.</p>
         </nav>
       </footer>
     </div>
   )
 }
-
