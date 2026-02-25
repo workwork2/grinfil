@@ -122,7 +122,7 @@ export default function Home() {
 
             <div className="contact-item">
               <strong>Email:</strong>{' '}
-              <a href="mailto:konsult.grupp@mail.ru">konsult.grupp@mail.ru</a>
+              <a href="mailto:konsult.grupp@mail.ru">grinfil.ooo@mail.ru</a>
             </div>
 
             <div className="contact-item">
