@@ -13,7 +13,7 @@ export default function Home() {
     <div className="App">
       <header className="header">
         <nav className="nav">
-          <h1 className="title">ООО «Консультгрупп»</h1>
+          <h1 className="title">ООО "Гринфил"</h1>
           <ul className="nav-links">
             <li><a href="#about">О компании</a></li>
             <li><a href="#why">Почему выбирают нас</a></li>
@@ -127,12 +127,11 @@ export default function Home() {
 
             <div className="contact-item">
               <strong>Телефон:</strong>{' '}
-              <a href="tel:+79143384783">+7 (914) 338 47 83</a>
+              <a href="tel:+79143384783">+7 (980) 132-98-38</a>
             </div>
 
             <div className="contact-item">
-              <strong>Адрес:</strong> 692512, Приморский край, город Уссурийск,
-              Комсомольская ул, зд. 28а, помещ. 30
+              <strong>Адрес:</strong> 117624, город Москва, Старокрымская ул, д. 15 к. 1, помещ. 44/1п
             </div>
           </div>
         </section>
@@ -145,7 +144,7 @@ export default function Home() {
             <li><a href="#why">Почему выбирают нас</a></li>
             <li><a href="#contacts">Контакты</a></li>
           </ul>
-          <p>© 2025 ООО «Консультгрупп». Все права защищены.</p>
+          <p>© 2025 ООО "Гринфил". Все права защищены.</p>
         </nav>
       </footer>
     </div>
